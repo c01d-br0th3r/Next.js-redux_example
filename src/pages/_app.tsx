@@ -26,8 +26,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Hello, OKKOT</title>
         <style>{globalStyle}</style>
-        <Header />
       </Head>
+      <Header />
       <Component {...pageProps} />
     </Fragment>
   );
