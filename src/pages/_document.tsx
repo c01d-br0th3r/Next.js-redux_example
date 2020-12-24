@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Document, {
   Html,
   DocumentContext,
@@ -16,11 +16,7 @@ class MyDocument extends Document<IProps> {
   static getInitialProps(ctx: DocumentContext): any {
     const sheet = new ServerStyleSheet();
     const page = ctx.renderPage((App) => (props) =>
-      sheet.collectStyles(
-        <Fragment>
-          <App {...props} />
-        </Fragment>
-      )
+      sheet.collectStyles(<App {...props} />)
     );
     const styleTags = sheet.getStyleElement();
     return { ...page, styleTags };
