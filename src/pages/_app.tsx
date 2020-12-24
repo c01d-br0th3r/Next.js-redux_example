@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Link from "next/link";
 import { createGlobalStyle } from "styled-components";
-import { wrapper } from "../store";
+import Header from "../components/Header";
 
 const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
     body {
         font-family: 'Noto Sans KR', sans-serif;
@@ -26,33 +27,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <Fragment>
       <GlobalStyles />
       <Head>
-        <title>Hello, Next!</title>
+        <title>Hello, OKKOT</title>
       </Head>
-      <ul>
-        <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/list">
-            <a>List</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/counter">
-            <a>Counter</a>
-          </Link>
-        </li>
-      </ul>
+      <Header />
       <Component {...pageProps} />
     </Fragment>
   );
 };
 
-export default wrapper.withRedux(MyApp);
+export default MyApp;

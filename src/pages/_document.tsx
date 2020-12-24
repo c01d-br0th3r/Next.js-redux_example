@@ -34,6 +34,7 @@ class MyDocument extends Document<IProps> {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
+          <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
         </Head>
         <body>
           <Main />
