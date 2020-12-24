@@ -24,9 +24,7 @@ const Header = () => {
       <Label size="18px" weight="500" color="#727272">
         오늘의영화
       </Label>
-      <Icon>
-        <i className="fas fa-cart-arrow-down" />
-      </Icon>
+      <Icon>Icon인데 너 때문에 이런거면 진짜 가만안둔다</Icon>
     </StyledDiv>
   );
 };
