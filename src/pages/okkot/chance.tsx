@@ -26,7 +26,7 @@ const Chance = () => {
   return (
     <Layout>
       <Test1>왜깜빡이냐고</Test1>
-      <Test2>개빡치게</Test2>
+      <Test2>진짜</Test2>
       <Test3>적당히하라고</Test3>
       <Test4>해달라는거다해줬잖아</Test4>
     </Layout>
