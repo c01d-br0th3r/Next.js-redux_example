@@ -24,7 +24,7 @@ class MyDocument extends Document<IProps> {
   render() {
     return (
       <Html>
-        <Head></Head>
+        <Head>{this.props.styleTags}</Head>
         <body>
           <Main />
           <NextScript />
