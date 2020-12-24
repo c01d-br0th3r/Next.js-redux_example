@@ -52,7 +52,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Layout>
         <Section>
           <Label size="20px" weight="500" margin="16px 0 8px 0">
-            여기는 홈입니다.
+            여기는 신상품입니다.
           </Label>
           <Slider>
             {popularMovies.map((popular: any) => (
