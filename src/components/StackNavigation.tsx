@@ -18,22 +18,22 @@ const StyledDiv = styled.div`
 const StackNavigation = () => {
   return (
     <StyledDiv>
-      <Link href="/">
+      <Link href="/okkot">
         <a>
           <Label>홈</Label>
         </a>
       </Link>
-      <Link href="/category">
+      <Link href="/okkot/category">
         <a>
           <Label>카테고리</Label>
         </a>
       </Link>
-      <Link href="/search">
+      <Link href="/okkot/search">
         <a>
           <Label>검색</Label>
         </a>
       </Link>
-      <Link href="/mypage">
+      <Link href="/okkot/mypage">
         <a>
           <Label>마이페이지</Label>
         </a>

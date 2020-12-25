@@ -8,7 +8,6 @@ import Box from "../../components/Box";
 import Section from "../../components/Section";
 import Slider from "../../components/Slider";
 import Label from "../../components/Label";
-import StackNavigation from "../../components/StackNavigation";
 
 import { gql } from "@apollo/client";
 import { client } from "../../apolloClient";
@@ -88,7 +87,6 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </Label>
         </Section>
       </Layout>
-      <StackNavigation />
     </Fragment>
   );
 };

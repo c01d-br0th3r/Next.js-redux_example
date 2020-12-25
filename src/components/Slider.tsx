@@ -11,6 +11,10 @@ const StyledDiv = styled.div`
   display: flex;
   align-items: center;
   overflow-x: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Layout: React.FC<ISliderProps> = ({ children }) => {

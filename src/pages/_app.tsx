@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Header from "../components/Header";
+import StackNavigation from "../components/StackNavigation";
 
 const globalStyle = `
 * {
@@ -29,6 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <StackNavigation />
     </Fragment>
   );
 };
