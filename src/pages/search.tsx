@@ -6,7 +6,6 @@ import { client } from "../apolloClient";
 
 const Search = (props: any) => {
   const [term, setTerm] = useState("");
-  const router = useRouter();
   const { launches } = props;
   console.log(launches);
   const handleChange = (e: React.ChangeEvent) => {
