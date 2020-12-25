@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { Fragment, useState } from "react";
 import { gql } from "@apollo/client";
 import { client } from "../apolloClient";
