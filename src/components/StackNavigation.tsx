@@ -3,6 +3,10 @@ import Link from "next/link";
 import styled from "styled-components";
 import Label from "./Label";
 
+interface IProps {
+  handleSearchOpen: React.MouseEventHandler<HTMLElement>;
+}
+
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
@@ -15,7 +19,7 @@ const StyledDiv = styled.div`
   padding: 24px 36px;
 `;
 
-const StackNavigation = () => {
+const StackNavigation: React.FC<IProps> = ({ handleSearchOpen }) => {
   return (
     <StyledDiv>
       <Link href="/okkot">
@@ -28,11 +32,7 @@ const StackNavigation = () => {
           <Label>카테고리</Label>
         </a>
       </Link>
-      <Link href="/okkot/search">
-        <a>
-          <Label>검색</Label>
-        </a>
-      </Link>
+      <Label onClick={handleSearchOpen}>검색</Label>
       <Link href="/okkot/mypage">
         <a>
           <Label>마이페이지</Label>

@@ -7,6 +7,7 @@ interface ILabelProps {
   color?: string;
   children?: React.ReactNode[] | string;
   margin?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 const StyledLabel = styled.div<ILabelProps>`
@@ -16,18 +17,8 @@ const StyledLabel = styled.div<ILabelProps>`
   margin: ${(props) => props.margin && props.margin};
 `;
 
-const Label: React.FC<ILabelProps> = ({
-  size,
-  weight,
-  color,
-  children,
-  margin,
-}) => {
-  return (
-    <StyledLabel size={size} weight={weight} color={color} margin={margin}>
-      {children}
-    </StyledLabel>
-  );
+const Label: React.FC<ILabelProps> = (props) => {
+  return <StyledLabel {...props}>{props.children}</StyledLabel>;
 };
 
 export default Label;
