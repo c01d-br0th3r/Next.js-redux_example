@@ -1,12 +1,25 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { Fragment } from "react";
 import axios from "axios";
+import Box from "../../components/Box";
 
 const Article = (props: any) => {
   const router = useRouter();
   const result = props.result;
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return (
+      <Fragment>
+        <Box width="300px" height="50px" />
+        <br />
+        <Box width="600px" height="30px" />
+        <br />
+        <Box width="600px" height="30px" />
+        <br />
+        <Box width="600px" height="30px" />
+        <br />
+        <Box width="600px" height="30px" />
+      </Fragment>
+    );
   }
   return (
     <div>
