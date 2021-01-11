@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.6",
-    "@okkot/ui": "file:../bloom-ui",
     "axios": "^0.21.1",
     "graphql": "^15.4.0",
     "next": "^10.0.5",
