@@ -114,7 +114,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             {popularMovies.map((popular: any) => (
               <Card>
                 <Image
-                  src="https://static.okkot.com/assignment/png-test-image.png"
+                  src="https://static.okkot.com/assignment/eucalyptus+black+jack.jpg"
                   alt=""
                   width={80}
                   height={100}
