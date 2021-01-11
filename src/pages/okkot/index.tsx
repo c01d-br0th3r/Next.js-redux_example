@@ -43,13 +43,14 @@ const Card2 = styled.div`
   }
   letter-spacing: -0.8px;
   color: #434343;
+  margin-bottom: 10px;
 `;
 
 const Grid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  gap: 10px;
 `;
 
 const Price = styled.div`
@@ -113,7 +114,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             {popularMovies.map((popular: any) => (
               <Card>
                 <Image
-                  src="https://static.okkot.com/assignment/eucalyptus+black+jack.jpg"
+                  src="https://static.okkot.com/assignment/png-test-image.png"
                   alt=""
                   width={80}
                   height={100}
@@ -148,9 +149,9 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <Grid>
             {popularMovies.map((popular: any, idx: number) => (
               <Card2 key={popular.id}>
-                <Badge>{idx}</Badge>
+                <Badge>{idx + 1}</Badge>
                 <Image
-                  src="https://static.okkot.com/assignment/eucalyptus+black+jack.jpg"
+                  src="https://static.okkot.com/assignment/jpeg-test-image.jpeg"
                   alt=""
                   width={80}
                   height={100}
@@ -176,7 +177,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <Label
                     margin="0 4px 0 0"
                     color="#ff6d5b"
-                    weight="600"
+                    weight="400"
                     size="12px"
                     padding="3px 8px"
                     backgroundColor="rgba(255, 107, 93, 0.09)"
@@ -185,7 +186,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   </Label>
                   <Label
                     color="#5999ff"
-                    weight="600"
+                    weight="400"
                     size="12px"
                     padding="3px 8px"
                     backgroundColor="#eef5ff"

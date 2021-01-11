@@ -16,7 +16,7 @@ const StyledDiv = styled.div<ISectionProps>`
 `;
 
 const Section: React.FC<ISectionProps> = ({
-  padding = "18px 16px",
+  padding = "18px 0px",
   margin,
   backgroundColor,
   children,
