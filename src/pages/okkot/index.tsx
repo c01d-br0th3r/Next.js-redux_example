@@ -130,6 +130,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             {popularMovies.map((popular: any) => (
               <Card>
                 <Image
+                  key={popular.id}
                   src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/161007788172739519.jpeg?gif=1&w=240&h=240&c=c"
                   alt=""
                   width={100}
@@ -146,7 +147,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </Label>
           <Grid>
             {popularMovies.map((popular: any, idx: number) => (
-              <Card2 key={idx}>
+              <Card2 key={popular.id}>
                 <Badge>{idx}</Badge>
                 <Image
                   src="https://static.okkot.com/images/w_300/1585536040285.jpg"
