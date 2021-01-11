@@ -23,7 +23,7 @@ const MenuList = styled.div`
   position: sticky;
   background-color: #fff;
   top: 0;
-  z-index: 20;
+  z-index: 50;
 `;
 
 const Card = styled.div`
@@ -61,7 +61,7 @@ const Price = styled.div`
 
 const Badge = styled.div`
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 40px;
@@ -113,7 +113,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             {popularMovies.map((popular: any) => (
               <Card>
                 <Image
-                  src="https://static.okkot.com/images/w_300/1585536040285.jpg"
+                  src="https://static.okkot.com/assignment/eucalyptus+black+jack.jpg"
                   alt=""
                   width={80}
                   height={100}
@@ -150,7 +150,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               <Card2 key={popular.id}>
                 <Badge>{idx}</Badge>
                 <Image
-                  src="https://static.okkot.com/images/w_300/1585536040285.jpg"
+                  src="https://static.okkot.com/assignment/eucalyptus+black+jack.jpg"
                   alt=""
                   width={80}
                   height={100}
