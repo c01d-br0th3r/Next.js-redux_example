@@ -10,13 +10,9 @@ const Article = (props: any) => {
     return (
       <Fragment>
         <Box width="300px" height="50px" />
-        <br />
         <Box width="600px" height="30px" />
-        <br />
         <Box width="600px" height="30px" />
-        <br />
         <Box width="600px" height="30px" />
-        <br />
         <Box width="600px" height="30px" />
       </Fragment>
     );

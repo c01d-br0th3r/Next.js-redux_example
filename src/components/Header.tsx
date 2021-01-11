@@ -10,6 +10,8 @@ const StyledDiv = styled.div`
   position: relative;
   padding: 12px;
   border-bottom: 1px solid #a2a2a2;
+  z-index: 20;
+  background-color: #fff;
 `;
 
 const Icon = styled.div`

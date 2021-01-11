@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 import Input from "./Input";
 import Label from "./Label";
@@ -10,14 +10,22 @@ interface IProps {
   term: string;
 }
 
-const StyledDiv = styled.div`
+const SearchWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  background-color: #a2a2a2;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+`;
+
+const StyledDiv = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 10;
+  background-color: #a2a2a2;
   opacity: 0.7;
 `;
 
@@ -26,11 +34,11 @@ const InputBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 24px;
+  z-index: 20;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 24px;
-  z-index: 20;
   background-color: #fff;
 `;
 
@@ -40,7 +48,7 @@ const SearchBox: React.FC<IProps> = ({
   term,
 }) => {
   return (
-    <Fragment>
+    <SearchWrapper>
       <StyledDiv onClick={handleSearchBox} />
       <InputBox>
         <Input type="text" onChange={handleChange} />
@@ -50,7 +58,7 @@ const SearchBox: React.FC<IProps> = ({
           </a>
         </Link>
       </InputBox>
-    </Fragment>
+    </SearchWrapper>
   );
 };
 

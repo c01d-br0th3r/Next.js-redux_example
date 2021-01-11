@@ -7,7 +7,10 @@ interface ILabelProps {
   color?: string;
   children?: React.ReactNode[] | string;
   margin?: string;
+  padding?: string;
+  backgroundColor?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
+  id?: string;
 }
 
 const StyledLabel = styled.div<ILabelProps>`
@@ -15,6 +18,10 @@ const StyledLabel = styled.div<ILabelProps>`
   font-weight: ${(props) => (props.weight ? props.weight : "120px")};
   color: ${(props) => (props.color ? props.color : "#232323")};
   margin: ${(props) => props.margin && props.margin};
+  background-color: ${(props) =>
+    props.backgroundColor && props.backgroundColor};
+  padding: ${(props) => props.padding && props.padding};
+  border-radius: 2px;
 `;
 
 const Label: React.FC<ILabelProps> = (props) => {

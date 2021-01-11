@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import styled from "styled-components";
+import Image from "next/image";
 
 import Layout from "../../components/Layout";
 import Box from "../../components/Box";
@@ -19,6 +20,61 @@ const MenuList = styled.div`
   padding: 12px;
   border-bottom: 1px solid #a2a2a2;
   font-size: 14px;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  z-index: 20;
+`;
+
+const Card = styled.div`
+  width: 35vw;
+  flex-shrink: 0;
+  margin-right: 8px;
+  img {
+    border-radius: 5px;
+  }
+`;
+
+const Card2 = styled.div`
+  position: relative;
+  width: 100%;
+  img {
+    border-radius: 5px;
+  }
+  letter-spacing: -0.8px;
+  color: #434343;
+`;
+
+const Grid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+`;
+
+const Price = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+`;
+
+const Badge = styled.div`
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #ff6b5d;
 `;
 
 const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -55,36 +111,90 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </Label>
           <Slider>
             {popularMovies.map((popular: any) => (
-              <Box
-                key={popular.id}
-                width="150px"
-                height="200px"
-                label={popular.mission_name}
-                margin="0 8px 0 0"
-              />
+              <Card>
+                <Image
+                  src="https://static.okkot.com/images/w_300/1585536040285.jpg"
+                  alt=""
+                  width={80}
+                  height={100}
+                  layout="responsive"
+                />
+                <Label margin="8px 0 0 0">{popular.mission_name}</Label>
+              </Card>
             ))}
           </Slider>
         </Section>
         <Section>
-          <Label size="20px" weight="500" margin="16px 0 8px 0">
-            카테고리
-          </Label>
+          <Label>카테고리</Label>
           <Slider>
             {popularMovies.map((popular: any) => (
-              <Box
-                key={popular.id}
-                width="70px"
-                height="70px"
-                margin="0 8px 0 0"
-                backgroudColor="#fff"
-              />
+              <Card>
+                <Image
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/161007788172739519.jpeg?gif=1&w=240&h=240&c=c"
+                  alt=""
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
+              </Card>
             ))}
           </Slider>
         </Section>
         <Section>
           <Label size="20px" weight="500" margin="16px 0 8px 0">
-            최신 영화에요.
+            여기는 리스트입니다.
           </Label>
+          <Grid>
+            {popularMovies.map((popular: any, idx: number) => (
+              <Card2 key={idx}>
+                <Badge>{idx}</Badge>
+                <Image
+                  src="https://static.okkot.com/images/w_300/1585536040285.jpg"
+                  alt=""
+                  width={80}
+                  height={100}
+                  layout="responsive"
+                />
+                <Label size="16px" margin="12px 0 4px 0">
+                  라넌큘러스라넌라넌
+                </Label>
+                <Price>
+                  <Label
+                    margin="0 8px 0 0"
+                    color="#ff6d5b"
+                    weight="600"
+                    size="18px"
+                  >
+                    35%
+                  </Label>
+                  <Label color="#212121" weight="600" size="18px">
+                    5,300원
+                  </Label>
+                </Price>
+                <Price>
+                  <Label
+                    margin="0 4px 0 0"
+                    color="#ff6d5b"
+                    weight="600"
+                    size="12px"
+                    padding="3px 8px"
+                    backgroundColor="rgba(255, 107, 93, 0.09)"
+                  >
+                    특가
+                  </Label>
+                  <Label
+                    color="#5999ff"
+                    weight="600"
+                    size="12px"
+                    padding="3px 8px"
+                    backgroundColor="#eef5ff"
+                  >
+                    무료배송
+                  </Label>
+                </Price>
+              </Card2>
+            ))}
+          </Grid>
         </Section>
       </Layout>
     </Fragment>
