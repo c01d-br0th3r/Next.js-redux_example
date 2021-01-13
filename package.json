@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "local": "next",
     "test": "NODE_ENV=test jest",
     "test:dev": "NODE_ENV=test jest --watchAll",
     "start": "NODE_ENV=production PORT=$PORT node ./dist/index.js",
