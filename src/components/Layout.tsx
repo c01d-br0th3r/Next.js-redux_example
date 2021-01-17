@@ -8,7 +8,7 @@ interface ILayoutProps {
 const StyledDiv = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 18px;
+  padding: 0 20px;
   padding-bottom: 80px;
 `;
 
