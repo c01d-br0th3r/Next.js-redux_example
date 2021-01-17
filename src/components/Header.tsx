@@ -24,9 +24,9 @@ const Header = () => {
   return (
     <StyledDiv>
       <Label size="18px" weight="500" color="#727272">
-        오늘의영화
+        오늘의꽃
       </Label>
-      <Icon>Icon입니다.</Icon>
+      <Icon>Demo!</Icon>
     </StyledDiv>
   );
 };
