@@ -17,6 +17,7 @@ const StyledDiv = styled.div`
   left: 0;
   background-color: #f3f3f3;
   padding: 24px 36px;
+  z-index: 30;
 `;
 
 const StackNavigation: React.FC<IProps> = ({ handleSearchOpen }) => {

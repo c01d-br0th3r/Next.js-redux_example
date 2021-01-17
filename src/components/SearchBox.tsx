@@ -16,6 +16,7 @@ const SearchWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 80;
 `;
 
 const StyledDiv = styled.div`
@@ -24,7 +25,7 @@ const StyledDiv = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 80;
   background-color: #a2a2a2;
   opacity: 0.7;
 `;
@@ -35,7 +36,7 @@ const InputBox = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  z-index: 20;
+  z-index: 90;
   position: absolute;
   top: 0;
   left: 0;
