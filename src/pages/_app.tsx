@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import StackNavigation from "../components/StackNavigation";
 import SearchBox from "components/SearchBox";
 
+import { wrapper } from "../store/reducers/configureStore";
+
 const globalStyle = `
 * {
   box-sizing: border-box;
@@ -81,4 +83,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
