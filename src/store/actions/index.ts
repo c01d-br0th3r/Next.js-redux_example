@@ -1,3 +1,4 @@
 import counterActions from "./counterActions";
+import addressActions from "./addressActions";
 
-export default { counterActions };
+export default { counterActions, addressActions };
