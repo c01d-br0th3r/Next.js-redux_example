@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootStore } from "store/reducers";
@@ -12,14 +13,22 @@ const Title = styled.div`
 
 const Home = () => {
   const counterState = useSelector((store: RootStore) => store.counter);
+  const addressState = useSelector((store: RootStore) => store.address);
   const dispatch = useDispatch();
   console.log(counterState);
+  console.log(addressState);
   return (
     <>
       <Title>{counterState.count}</Title>
       <button onClick={() => dispatch(allActions.counterActions.increase())}>
         +
       </button>
+      <Link href="/destination">
+        <a>
+          <h2>배송지 입력</h2>
+        </a>
+      </Link>
+      <h1>{addressState.address.address}</h1>
     </>
   );
 };
